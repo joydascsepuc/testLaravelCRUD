@@ -18,11 +18,11 @@ use Illuminate\Support\Facades\Route;
 });
 */
 
-/*Pages Routes*/
+/*Pages Routes*/ 
 Route::get('/', 'App\Http\Controllers\PagesController@index')->name('homePage');
 Route::get('/about', 'App\Http\Controllers\PagesController@about')->name('aboutPage');
 Route::get('/contact', 'App\Http\Controllers\PagesController@contact')->name('contactPage');
-
+Route::get('/allMessages', 'App\Http\Controllers\ContactController@getAllMessages')->name('allMessages');
 
 /*Forms Routes*/
 Route::post('/contact/submit', 'App\Http\Controllers\ContactController@submit')->name('contact-form-submit');

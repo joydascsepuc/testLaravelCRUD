@@ -18,4 +18,10 @@ class ContactController extends Controller
 
     	return redirect()->route('homePage')->with('success','Message Sent. Wait for review.!');
     }
+
+    public function getAllMessages()
+    {
+    	$messages = Contact::all();
+    	return view('pages.messages')->with('messages', $messages);
+    }
 }
